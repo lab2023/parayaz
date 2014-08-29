@@ -1,5 +1,9 @@
 
 #### [Current]
+ * [a347fd7](../../commit/a347fd7) - __(Ahmet Sezgin Duran)__ Revert back to original file
+
+#### 1.0.2
+ * [4e260af](../../commit/4e260af) - __(Ahmet Sezgin Duran)__ Bump version 1.0.2
  * [e14b059](../../commit/e14b059) - __(Ahmet Sezgin Duran)__ [#1](../../issues/1) Fix negative number error
 
 #### 1.0.1
