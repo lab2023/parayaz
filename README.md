@@ -1,6 +1,6 @@
 # Parayaz
 
-TODO: Write a gem description
+Turkish number to text money
 
 ## Installation
 
@@ -19,12 +19,17 @@ Or install it yourself as:
     $ gem install parayaz
 
 ## Usage
+```
+> 123.parayaz
+# yüzyirmiüçTL
 
-TODO: Write usage instructions here
+> 123.55.parayaz
+# yüzyirmiüçTL,ellibeşkr
+```
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/parayaz/fork )
+1. Fork it ( https://github.com/lab2023/parayaz/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
