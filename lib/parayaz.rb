@@ -4,11 +4,20 @@ module Parayaz
   def parayaz
     number = self
 
-    price, cents = number.to_s.split('.').map(&:to_i)
+    price, cents = number.to_s.split('.')
 
     text = convert_to_text(price) + 'TL'
+    if cents
+      if cents.size == 1
+        cents = (cents.to_i * 10).to_s
+      end
 
-    text += ',' + convert_to_text(cents) + 'kr' if cents
+      if cents.size > 2
+        cents = cents[0..1]
+      end
+
+      text += ',' + convert_to_text(cents) + 'kr'
+    end
 
     text
   end
@@ -32,6 +41,7 @@ module Parayaz
     end
 
     def convert_to_text(number)
+      number = number.to_i
       lots = ['', 'bin', 'milyon', 'milyar', 'trilyon', 'katrilyon', 'kentilyon', 'seksilyon', 'septilyon']
 
       text = ''
