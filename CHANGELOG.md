@@ -1,7 +1,9 @@
 
 #### [Current]
 
-#### 
+
+#### 1.0.0
+ * [7c6ca13](../../commit/7c6ca13) - __(Muhammet Dilek)__ bump version 1.0.0
  * [f3e609f](../../commit/f3e609f) - __(Muhammet Dilek)__ dot added to text
  * [767d851](../../commit/767d851) - __(Muhammet Dilek)__ cents fixed
  * [894aaef](../../commit/894aaef) - __(Muhammet Dilek)__ licence added and readme fixed

@@ -7,7 +7,7 @@ module Parayaz
     price, cents = number.to_s.split('.')
 
     text = convert_to_text(price) + 'TL'
-    if cents
+    if cents && cents.to_i > 0
       if cents.size == 1
         cents = (cents.to_i * 10).to_s
       end
