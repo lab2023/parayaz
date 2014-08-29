@@ -25,8 +25,8 @@ module Parayaz
     end
 
     def say_3_digit_text(n)
-      one = n[0] == 1 ? 'Yüz' : say_1_digit_text(n[0])
-      one += 'Yüz' unless n[0] == 1 || n[0] == 0
+      one = n[0] == 1 ? 'yüz' : say_1_digit_text(n[0])
+      one += 'yüz' unless n[0] == 1 || n[0] == 0
       n.delete_at(0)
       one + say_2_digit_text(n)
     end
