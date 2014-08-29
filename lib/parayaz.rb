@@ -19,7 +19,7 @@ module Parayaz
       text += ',' + convert_to_text(cents) + 'kr'
     end
 
-    text
+    text + '.'
   end
 
   private
