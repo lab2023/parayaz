@@ -19,7 +19,7 @@ Or install it yourself as:
     $ gem install parayaz
 
 ## Usage
-```
+```ruby
 > 123.parayaz
 # yüzyirmiüçTL
 
