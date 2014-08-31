@@ -9,20 +9,21 @@ module Parayaz
 
     price, cents = number.to_s.split('.')
 
-    text = convert_to_text(price) + 'TL'
+    text = convert_to_text(price)
+    text += 'TL' unless text.empty?
+
     if cents && cents.to_i > 0
       if cents.size == 1
         cents = (cents.to_i * 10).to_s
       end
-
       if cents.size > 2
         cents = cents[0..1]
       end
-
-      text += ',' + convert_to_text(cents) + 'kr'
+      text += ',' unless text.empty?
+      text += convert_to_text(cents) + 'kr'
     end
 
-    (minus ? 'eksi' : '') + text + '.'
+    (minus ? 'eksi ' : '') + text
   end
 
   private
