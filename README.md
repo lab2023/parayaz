@@ -1,6 +1,6 @@
 # Parayaz
 
-Turkish number to text money
+Turkish number to text money according to [TDK][1000]
 
 ## Installation
 
@@ -14,9 +14,17 @@ And then execute:
 
     $ bundle
 
+Or
+
+    $ bundle install --path=vendor/bundle
+
 Or install it yourself as:
 
     $ gem install parayaz
+
+## Tests
+
+Use `rake test` or `bundle exec rake test` to run specs.
 
 ## Usage
 ```ruby
@@ -24,7 +32,7 @@ Or install it yourself as:
 # yüzyirmiüçTL
 
 > 123.55.parayaz
-# yüzyirmiüçTL,ellibeşkr
+# yüzyirmiüçTL,ellibeşkr.
 ```
 
 ## Contributing
@@ -46,3 +54,5 @@ Or install it yourself as:
 ## License
 
 Copyright 2014 lab2023 - information technologies
+
+[1000]: http://www.tdk.gov.tr/index.php?option=com_content&view=article&id=182:Sayilarin-s
