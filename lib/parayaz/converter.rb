@@ -16,10 +16,21 @@ module Parayaz
       number *= -1 if minus
       @price, @cents = number.to_s.split('.')
 
+      # Do the converting
+      convert_price
+      convert_cents
+
+      # Return the converted text. If it's minus add 'eksi' to in front.
+      @text = (minus ? 'eksi ' : '') + @text
+    end
+
+    def convert_price
       # Convert the price to text
       @text = convert_to_text(@price)
       @text += 'TL' unless @text.empty?
+    end
 
+    def convert_cents
       # Convert cents side to text if it's existing.
       if @cents && @cents.to_i > 0
         if @cents.size == 1
@@ -31,9 +42,6 @@ module Parayaz
         @text += ',' unless @text.empty?
         @text += convert_to_text(@cents) + 'kr.'
       end
-
-      # Return the converted text. If it's minus add 'eksi' to in front.
-      @text = (minus ? 'eksi ' : '') + @text
     end
 
     # Converts 1 digit numbers to their Turkish Equivalents
