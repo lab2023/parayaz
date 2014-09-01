@@ -1,6 +1,6 @@
 # Parayaz
 
-Turkish number to text money
+Turkish number to text money according to [TDK][1000]
 
 ## Installation
 
@@ -14,9 +14,17 @@ And then execute:
 
     $ bundle
 
+Or
+
+    $ bundle install --path=vendor/bundle
+
 Or install it yourself as:
 
     $ gem install parayaz
+
+## Tests
+
+Use `rake test` or `bundle exec rake test` to run specs.
 
 ## Usage
 ```ruby
@@ -24,7 +32,7 @@ Or install it yourself as:
 # yüzyirmiüçTL
 
 > 123.55.parayaz
-# yüzyirmiüçTL,ellibeşkr
+# yüzyirmiüçTL,ellibeşkr.
 ```
 
 ## Contributing
@@ -39,10 +47,12 @@ Or install it yourself as:
 
 ![lab2023](http://lab2023.com/assets/images/named-logo.png)
 
-- BinChecker is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
-- Thank you to all the [contributors!](https://github.com/kebab-project/kangal/graphs/contributors)
+- Parayaz is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
+- Thank you to all the [contributors!](https://github.com/lab2023/parayaz/graphs/contributors)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
 ## License
 
 Copyright 2014 lab2023 - information technologies
+
+[1000]: http://www.tdk.gov.tr/index.php?option=com_content&view=article&id=182:Sayilarin-s

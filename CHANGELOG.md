@@ -1,6 +1,17 @@
 
 #### [Current]
+ * [f26aa42](../../commit/f26aa42) - __(Ahmet Sezgin Duran)__ Fix README
 
+#### 1.0.3
+ * [e66b758](../../commit/e66b758) - __(Ahmet Sezgin Duran)__ Bump version 1.0.3
+ * [a347fd7](../../commit/a347fd7) - __(Ahmet Sezgin Duran)__ Revert back to original file
+
+#### 1.0.2
+ * [4e260af](../../commit/4e260af) - __(Ahmet Sezgin Duran)__ Bump version 1.0.2
+ * [e14b059](../../commit/e14b059) - __(Ahmet Sezgin Duran)__ [#1](../../issues/1) Fix negative number error
+
+#### 1.0.1
+ * [52a9cd6](../../commit/52a9cd6) - __(Murat Kemal BAYGN)__ Remove kr if zero (0)
 
 #### 1.0.0
  * [7c6ca13](../../commit/7c6ca13) - __(Muhammet Dilek)__ bump version 1.0.0
