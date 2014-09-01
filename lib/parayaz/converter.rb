@@ -10,13 +10,17 @@ module Parayaz
     attr_reader :text
 
     def initialize(number)
+      # Check if number is lesser than 0 if so assign multiply it with -1
+      # and assign the minus flag as true
       minus = number < 0
       number *= -1 if minus
       @price, @cents = number.to_s.split('.')
 
+      # Convert the price to text
       @text = convert_to_text(@price)
       @text += 'TL' unless @text.empty?
 
+      # Convert cents side to text if it's existing.
       if @cents && @cents.to_i > 0
         if @cents.size == 1
           @cents = (@cents.to_i * 10).to_s
@@ -28,6 +32,7 @@ module Parayaz
         @text += convert_to_text(@cents) + 'kr.'
       end
 
+      # Return the converted text. If it's minus add 'eksi' to in front.
       @text = (minus ? 'eksi ' : '') + @text
     end
 
