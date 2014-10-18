@@ -11,6 +11,24 @@ describe Parayaz do
     it 'should return: binbeşyüzkırkbirTL' do
       expect(1541.parayaz).to eq 'binbeşyüzkırkbirTL'
     end
+    
+    # testing SHORT and LONG methods
+    
+    it 'should return: 35.0₺' do
+      expect(35.SHORT(decimals=1)).to eq '35.0₺'
+    end
+    
+    it 'should return: 27.00₺' do
+      expect(27.SHORT(decimals=2)).to eq '27.00₺'
+    end
+    
+    it 'should return: 45.0₺ (kırkbeşTL)' do
+      expect(45.LONG(decimals=1)).to eq '45.0₺ (kırkbeşTL)'
+    end
+    
+    it 'should return: 70.00₺ (yetmişTL)' do
+      expect(70.LONG(decimals=2)).to eq '70.00₺ (yetmişTL)'
+    end
   end
 
   context 'Test float numbers' do
@@ -48,4 +66,5 @@ describe Parayaz do
       expect(-0.5.parayaz).to eq 'eksi ellikr.'
     end
   end
+  
 end
