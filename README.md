@@ -48,7 +48,7 @@ Use `rake test` or `bundle exec rake test` to run specs.
 ![lab2023](http://lab2023.com/assets/images/named-logo.png)
 
 - Parayaz is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
-- Thank you to all the [contributors!](https://github.com/lab2023/parayaz/graphs/contributors)
+- Thank you to all the [contributors!](../../graphs/contributors)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
 ## License
