@@ -25,6 +25,23 @@ module Parayaz
 
     (minus ? 'eksi ' : '') + text
   end
+  
+  # 35.00₺  70.00₺
+  # 5.0₺ 
+  def SHORT decimals=2
+    "%.#{decimals}f₺" % self
+  end
+  
+  # Copy of SHORT
+  def TL decimals=2
+    "%.#{decimals}f₺" % self
+  end
+  
+  # 20.0₺ (yirmiTL)
+  # 35.0₺ (otuzbeşTL)
+  def LONG decimals=2
+    "%s (%s)" % [self.SHORT(decimals), parayaz]
+  end
 
   private
   def say_1_digit_text(n)
