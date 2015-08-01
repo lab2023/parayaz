@@ -2,7 +2,7 @@ require 'parayaz/version'
 
 module Parayaz
   def parayaz
-    number = self
+    number = self.to_f
     minus = number < 0
 
     number *= -1 if minus

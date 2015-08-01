@@ -48,4 +48,19 @@ describe Parayaz do
       expect(-0.5.parayaz).to eq 'eksi ellikr.'
     end
   end
+
+  context 'Test Rational numbers' do
+    it 'should return eksi ikiTL' do
+      expect(Rational(-2, 1).parayaz).to eq 'eksi ikiTL'
+    end
+    it 'should return birTL,ellikr.' do
+      expect(Rational(3, 2).parayaz).to eq 'birTL,ellikr.'
+    end
+    it 'should return onTL' do
+      expect(Rational(10, 1).parayaz).to eq 'onTL'
+    end
+    it 'should return ellikr.' do
+      expect(Rational(1, 2).parayaz).to eq 'ellikr.'
+    end
+  end
 end
