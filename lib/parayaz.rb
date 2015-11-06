@@ -20,33 +20,33 @@ module Parayaz
         cents = cents[0..1]
       end
       text += ',' unless text.empty?
-      text += convert_to_text(cents) + 'kr.'
+      text += convert_to_text(cents) + 'KR.'
     end
 
-    (minus ? 'eksi ' : '') + text
+    (minus ? 'EKSİ ' : '') + text
   end
 
   private
   def say_1_digit_text(n)
-    one_digits_text = ['', 'bir', 'iki', 'üç', 'dört', 'beş', 'altı', 'yedi', 'sekiz', 'dokuz']
+    one_digits_text = ['', 'BİR', 'İKİ', 'ÜÇ', 'DÖRT', 'BEŞ', 'ALTI', 'YEDİ', 'SEKİZ', 'DOKUZ']
     one_digits_text[n]
   end
 
   def say_2_digit_text(n)
-    two_digits_text = ['', 'on', 'yirmi', 'otuz', 'kırk', 'elli', 'altmış', 'yetmiş', 'seksen', 'doksan']
+    two_digits_text = ['', 'ON', 'YİRMİ', 'OTUZ', 'KIRK', 'ELLİ', 'ALTMIŞ', 'YETMİŞ', 'SEKSEN', 'DOKSAN']
     two_digits_text[n[0]] + say_1_digit_text(n[1])
   end
 
   def say_3_digit_text(n)
-    one = n[0] == 1 ? 'yüz' : say_1_digit_text(n[0])
-    one += 'yüz' unless n[0] == 1 || n[0] == 0
+    one = n[0] == 1 ? 'YÜZ' : say_1_digit_text(n[0])
+    one += 'YÜZ' unless n[0] == 1 || n[0] == 0
     n.delete_at(0)
     one + say_2_digit_text(n)
   end
 
   def convert_to_text(number)
     number = number.to_i
-    lots = ['', 'bin', 'milyon', 'milyar', 'trilyon', 'katrilyon', 'kentilyon', 'seksilyon', 'septilyon']
+    lots = ['', 'BİN', 'MİLYON', 'MİLYAR', 'TRİLYON', 'KATRİLYON', 'KENTİLYON', 'SEKSİLYON', 'SEPTİLYON']
 
     text = ''
 
